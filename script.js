@@ -7,7 +7,9 @@ const dice = document.querySelector(".dice"),
   holdBtn = document.querySelector(".btn--hold"),
   player1 = document.querySelector(".player--0"),
   player2 = document.querySelector(".player--1"),
-  newGameBtn = document.querySelector(".btn--new");
+  newGameBtn = document.querySelector(".btn--new"),
+  player2Name = document.querySelector("#name--1"),
+  player1Name = document.querySelector("#name--0");
 
 totalScore1.textContent = 0;
 totalScore2.textContent = 0;
@@ -18,7 +20,12 @@ let diceNumber = 0,
   player1TotalScore = 0,
   player2TotalScore = 0,
   player1CurrentScore = 0,
-  player2CurrentScore = 0;
+  player2CurrentScore = 0,
+  name1 = prompt("Enter Player 1 Name"),
+  name2 = prompt("Enter Player 2 Name");
+
+player1Name.textContent = name1;
+player2Name.textContent = name2;
 
 function randomDice() {
   diceNumber = Math.floor(Math.random() * 6 + 1);
